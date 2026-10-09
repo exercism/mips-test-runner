@@ -1,4 +1,4 @@
-FROM eclipse-temurin:26.0.2_10-jdk@sha256:c0fe66ea21e972724000cf402f8081c7841d960839f69cb0754f40b40f74b2cc
+FROM eclipse-temurin:27_35-jdk@sha256:2771efbbc159b89dc38b82ebe01312fd1b5f226071ff715ca9edd5411a389761
 
 RUN apt-get update && \
     apt-get install --yes --no-install-recommends jq && \
