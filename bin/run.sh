@@ -35,7 +35,7 @@ echo "${slug}: testing..."
 
 # Run the tests for the provided implementation file and redirect stdout and
 # stderr to capture it
-test_output=$(java -Djava.util.prefs.userRoot=/tmp -jar /opt/test-runner/Mars4_5.jar nc "${runner_file}" "${impl_file}" 2>&1)
+test_output=$(java -XX:AOTCache=/opt/test-runner/mars.aot -Djava.util.prefs.userRoot=/tmp -jar /opt/test-runner/Mars4_5.jar nc "${runner_file}" "${impl_file}" 2>&1)
 echo "${test_output}" | grep "all tests passed"
 
 # Write the results.json file based on the exit code of the command that was
